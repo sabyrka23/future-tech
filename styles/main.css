@@ -683,9 +683,30 @@ button[aria-label]::before {
   align-items: start;
   column-gap: clamp(1.25rem, 0.041322314rem + 4.958677686vw, 5rem);
 }
+@media (width <= 63.99875rem) {
+  .footer__menu {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2.5rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .footer__menu {
+    row-gap: 1.25rem;
+  }
+}
 .footer__menu-column {
   display: grid;
   row-gap: clamp(1rem, 0.597107438rem + 1.652892562vw, 2.25rem);
+}
+@media (width <= 63.99875rem) {
+  .footer__menu-column:last-child {
+    grid-column: -1/1;
+  }
+  .footer__menu-column:last-child .footer__menu-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
 }
 .footer__menu-list {
   display: flex;
